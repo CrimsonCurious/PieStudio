@@ -1,11 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PieStudio</title>
+
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #161a2f;
+      --accent: #7c7cff;
+      --text: #eaeaff;
+      --muted: #a0a3c4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1a1f3a, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      max-width: 720px;
+      width: 100%;
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #9aa3ff, #6df0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      background: var(--accent);
+      color: #0f1220;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 0.85rem;
+      color: #6f73a7;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>PieStudio</h1>
-  <p>Main site coming soon.</p>
+  <div class="card">
+    <h1>PieStudio</h1>
+    <p>
+      I’m building a game from the ground up — focused on performance, clean design,
+      and making something genuinely fun to play.
+    </p>
+
+    <div class="buttons">
+      <a class="btn" href="https://github.com/CrimsonCurious" target="_blank">
+        GitHub
+      </a>
+    </div>
+
+    <footer>
+      © 2025 PieStudio — All builds, no fluff.
+    </footer>
+  </div>
 </body>
 </html>
